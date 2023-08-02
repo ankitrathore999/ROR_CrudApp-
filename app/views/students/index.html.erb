@@ -1,0 +1,13 @@
+
+<table>
+<% @students.each do |std|%>
+<tr>
+<td><%= link_to std.name, student_path(std)%></td>
+<td><%= button_to 'Edit',edit_student_path(std),method:'get'%></td>
+<td><%= button_to 'Delete',student_path(std),method:'delete'%></td>
+<td><%= button_to 'show',root_path(std),method:'post'%></td>
+
+
+</tr>
+<% end %>
+</table>
